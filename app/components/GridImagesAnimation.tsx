@@ -65,8 +65,6 @@ export default function GridImagesAnimation() {
       animateImages(images);
     });
 
-    
-
     mm.add("(min-width: 1424px)", () => {
       gsap.to(".images-grid", {
         scale: 0.8,
@@ -91,9 +89,9 @@ export default function GridImagesAnimation() {
         scrollTrigger: {
           trigger: heroRef.current,
           start: "top+=200 center",
-          end: "+=1300",
+          end: "+=1900",
           scrub: 1,
-          markers: true,
+          // markers: true,
           pin: true,
         },
       });
@@ -109,10 +107,11 @@ export default function GridImagesAnimation() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".back-image",
-          start: "top+=1300 20%",
-          end: "bottom-=700 20%",
+          start: "top+=1500 top",
+          end: "bottom-=780 50%",
           scrub: 1,
-          //   markers: true,
+          // markers: true,
+          // pin: true,
         },
       }
     );
